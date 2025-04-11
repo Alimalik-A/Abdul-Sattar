@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عبدالستار کارپنٹر سروس - کراچی</title>
+    <meta name="description" content="کراچی میں عبدالستار کارپنٹر سروسز، فرنیچر بنانے، مرمت، اور کسٹم ڈیزائن کے ماہر۔">
+    <meta name="keywords" content="کارپنٹر سروس، کراچی، فرنیچر، کسٹم ڈیزائن، عبدالستار">
+    <meta name="author" content="عبدالستار کارپنٹر سروس">
+
+    <style>
+        /* عمومی اسٹائلز */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            direction: rtl;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* نیویگیشن بار */
+        header {
+            background-color: #3e2723;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffca28;
+        }
+
+        /* ہوم سیکشن */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background-color: #ffca28;
+            color: #3e2723;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #ffb300;
+        }
+
+        /* 3D اینیمیشن */
+        .animation-3d {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            perspective: 1000px;
+        }
+
+        .tool-3d {
+            width: 100px;
+            height: 100px;
+            background: url('https://cdn.pixabay.com/photo/2016/12/27/22/21/hammer-1935015_1280.png') no-repeat center;
+            background-size: contain;
+            animation: rotate3D 5s infinite linear;
+        }
+
+        @keyframes rotate3D {
+            0% {
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+            100% {
+                transform: rotateY(360deg) rotateX(360deg);
+            }
+        }
+
+        /* ہمارے بارے میں سیکشن */
+        #about {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #3e2723;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .team-member h3 {
+            font-size: 24px;
+            color: #3e2723;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* سروسز سیکشن */
+        #services {
+            padding: 80px 0;
+            background-color: #f4f4f4;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #3e2723;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* پروجیکٹس سیکشن */
+        #projects {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .projects-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project-overlay p {
+            font-size: 16px;
+        }
+
+        /* رابطہ سیکشن */
+        #contact {
+            padding: 80px 0;
+            background-color: #3e2723;
+            color: #fff;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button {
+            background-color: #ffca28;
+            color: #3e2723;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #ffb300;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* عمومی سوالات سیکشن */
+        #faq {
+            padding: 80px 0;
+            background-color: #f4f4f4;
+        }
+
+        .faq-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #3e2723;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            font-size: 16px;
+            color: #666;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+        }
+
+        /* فوٹر */
+        footer {
+            background-color: #3e2723;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        /* ریسپانسیو ڈیزائن */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: #3e2723;
+                width: 100%;
+                padding: 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid,
+            .projects-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- نیویگیشن بار -->
+    <header>
+        <nav>
+            <div class="logo">عبدالستار کارپنٹر سروس</div>
+            <ul class="nav-links">
+                <li><a href="#home">ہوم</a></li>
+                <li><a href="#about">ہمارے بارے میں</a></li>
+                <li><a href="#services">سروسز</a></li>
+                <li><a href="#projects">پروجیکٹس</a></li>
+                <li><a href="#contact">رابطہ</a></li>
+                <li><a href="#faq">عمومی سوالات</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <!-- ہوم سیکشن -->
+    <section id="home">
+        <div class="hero-content">
+            <h1>کراچی میں عبدالستار کارپنٹر سروسز</h1>
+            <p>ہم آپ کے لیے اعلیٰ معیار کا فرنیچر بناتے ہیں، مرمت کرتے ہیں، اور کسٹم ڈیزائن فراہم کرتے ہیں۔</p>
+            <a href="#contact" class="cta-btn">ہم سے رابطہ کریں</a>
+        </div>
+        <div class="animation-3d">
+            <div class="tool-3d"></div>
+        </div>
+    </section>
+
+    <!-- ہمارے بارے میں سیکشن -->
+    <section id="about">
+        <h2 class="section-title">ہمارے بارے میں</h2>
+        <div class="about-content">
+            <p>عبدالستار کارپنٹر سروس کو 10 سال سے زیادہ کا تجربہ ہے۔ ہم کراچی میں آپ کے گھر اور دفتر کے لیے خوبصورت اور پائیدار فرنیچر بنانے میں ماہر ہیں۔</p>
+            <p>ہماری ٹیم ہنر مند کاریگروں پر مشتمل ہے جو ہر پروجیکٹ کو محنت اور توجہ سے مکمل کرتی ہے۔ ہم کسٹم ڈیزائن سے لے کر مرمت تک ہر قسم کی سروس پیش کرتے ہیں۔</p>
+            <p>ہمارا مقصد آپ کے خوابوں کو حقیقت میں بدلنا ہے، چاہے وہ ایک جدید الماری ہو یا کلاسک ڈائننگ ٹیبل۔</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://i.ibb.co/5Y2qW5S/shalwar-kameez-carpenter.jpg" alt="عبدالستار - کارپنٹر">
+                    <h3>عبدالستار - کارپنٹر</h3>
+                    <p>10 سال سے زیادہ کا تجربہ رکھنے والے ماہر کارپنٹر، جو فرنیچر بنانے اور مرمت میں مہارت رکھتے ہیں۔</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.ibb.co/5vYkL2N/coat-wala-worker.jpg" alt="علی ملک - پروفیشنل ورکر">
+                    <h3>علی ملک - پروفیشنل ورکر</h3>
+                    <p>ہمارا پروفیشنل ورکر جو کسٹم ڈیزائن اور کلائنٹ مینجمنٹ میں ماہر ہے۔</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سروسز سیکشن -->
+    <section id="services">
+        <h2 class="section-title">ہماری سروسز</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2017/08/07/14/02/work-2604795_1280.jpg" alt="فرنیچر ڈیزائن">
+                <h3>کسٹم فرنیچر ڈیزائن</h3>
+                <p>آپ کی ضرورت کے مطابق منفرد اور خوبصورت فرنیچر ڈیزائن کرتے ہیں۔</p>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/hammer-1869813_1280.jpg" alt="فرنیچر مرمت">
+                <h3>فرنیچر مرمت</h3>
+                <p>پرانے اور خراب فرنیچر کو نئی زندگی دیتے ہیں۔</p>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/wardrobe-849823_1280.jpg" alt="الماری بنانا">
+                <h3>الماری اور کیبنٹس</h3>
+                <p>جدید اور فعال الماریاں آپ کے گھر کے لیے۔</p>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/door-1869812_1280.jpg" alt="دروازہ بنانا">
+                <h3>دروازے اور کھڑکیاں</h3>
+                <p>پائیدار اور خوبصورت دروازوں اور کھڑکیوں کی تیاری۔</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- پروجیکٹس سیکشن -->
+    <section id="projects">
+        <h2 class="section-title">ہمارے پروجیکٹس</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/dining-table-849825_1280.jpg" alt="پروجیکٹ 1">
+                <div class="project-overlay">
+                    <h3>جدید ڈائننگ ٹیبل</h3>
+                    <p>کراچی کے ایک کلائنٹ کے لیے بنایا گیا خوبصورت ٹیبل۔</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/wardrobe-849823_1280.jpg" alt="پروجیکٹ 2">
+                <div class="project-overlay">
+                    <h3>کسٹم الماری</h3>
+                    <p>جدید ڈیزائن کی الماری گھر کے لیے۔</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/desk-1869811_1280.jpg" alt="پروجیکٹ 3">
+                <div class="project-overlay">
+                    <h3>دفتر کا فرنیچر</h3>
+                    <p>ایک مقامی دفتر کے لیے بنایا گیا ڈیسک۔</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/bedroom-849826_1280.jpg" alt="پروجیکٹ 4">
+                <div class="project-overlay">
+                    <h3>بیڈ روم سیٹ</h3>
+                    <p>پائیدار اور خوبصورت بیڈ روم فرنیچر۔</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- رابطہ سیکشن -->
+    <section id="contact">
+        <h2 class="section-title">ہم سے رابطہ کریں</h2>
+        <div class="contact-content">
+            <form class="contact-form" action="mailto:sm5762361@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="آپ کا نام" required>
+                <input type="email" name="email" placeholder="آپ کا ای میل" required>
+                <input type="tel" name="phone" placeholder="آپ کا فون نمبر" required>
+                <textarea name="message" placeholder="آپ کا پیغام" required></textarea>
+                <button type="submit">پیغام بھیجیں</button>
+            </form>
+            <div class="contact-info">
+                <p>📍 پتہ: کراچی، پاکستان</p>
+                <p>📞 فون: 03002701536 | 03019326160</p>
+                <p>📧 ای میل: sm5762361@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- عمومی سوالات سیکشن -->
+    <section id="faq">
+        <h2 class="section-title">عمومی سوالات</h2>
+        <div class="faq-content">
+            <div class="faq-item">
+                <div class="faq-question">ہماری خدمات کی لاگت کیا ہے؟<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">ہر پروجیکٹ کی لاگت مختلف ہوتی ہے۔ براہ کرم رابطہ کریں تاکہ ہم آپ کی ضروریات کے مطابق کوٹیشن دیں۔</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">فرنیچر بنانے میں کتنا وقت لگتا ہے؟<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">عام طور پر 1-4 ہفتے، لیکن یہ پروجیکٹ کے سائز پر منحصر ہے۔</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">کیا آپ مرمت کی خدمات پیش کرتے ہیں؟<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">جی ہاں، ہم پرانے فرنیچر کی مرمت کرتے ہیں۔</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">کیا آپ کراچی کے باہر کام کرتے ہیں؟<span class="faq-toggle">+</span></div>
+                <div class="faq-answer">فی الحال ہم صرف کراچی میں خدمات دیتے ہیں۔</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوٹر -->
+    <footer>
+        <p>© 2025 عبدالستار کارپنٹر سروس۔ جملہ حقوق محفوظ ہیں۔</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // نیویگیشن ٹوگل
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // ہموار اسکرولنگ
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // FAQ ٹوگل
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const toggle = item.querySelector('.faq-toggle');
+
+            question.addEventListener('click', () => {
+                answer.classList.toggle('active');
+                toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+            });
+        });
+    </script>
+</body>
+</html>
